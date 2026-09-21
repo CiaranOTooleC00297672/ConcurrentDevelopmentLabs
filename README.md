@@ -1,12 +1,13 @@
 # Barriers & Rendezvous
+The following folder is my attempt at implementation barriers and rendezvous. 
 
 ## Barriers
-The following folder is my attempt at implementation barriers and rendezvous. In the Barrier section a simple mutex lock alongside a semaphore was used to track all of A then release before allowing B to run.
+In the Barrier section a simple mutex lock alongside a semaphore was used to track all of A then release before allowing B to run.
 
 ## Rendezvous
 The rendezvous took some trial an error with blocking and signal handling but once I had it in the correct order the threads executed in the expected fashion.
 
-* Collaboration with students Bartosz in class and Sam & Bartosz via a call after class (labelled in the code) *
+* Collaboration with students Bartosz in class and Sam & Bartosz via a call after class (labelled in the code)
 
 
 ## How to Run
