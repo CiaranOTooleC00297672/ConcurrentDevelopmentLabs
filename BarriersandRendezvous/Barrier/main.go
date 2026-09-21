@@ -21,7 +21,7 @@ func doStuff(goNum int, count *int, wg *sync.WaitGroup, sem chan struct{}, tot *
 	time.Sleep(time.Second)
 	fmt.Println("Part A", goNum)
 	mutex.Lock()        //we lock here as if we let them all access our counter at the same time it can break (dangerous)
-	*count++            //increment process amount
+	*count++            //increment process amount, we use mem address and pointers so counter is consistent
 	if *count == *tot { //if we hit 10, that's all of A so last one lets them all run then we allow B to work
 		for i := 0; i < *tot; i++ {
 			sem <- struct{}{} //cycle for 10 and output them
